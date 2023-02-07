@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My List</title>
+</head>
+<body>
+
+ 
+
+   <h1>To do list of Today <%= kindOfDay %></h1>
+   <ul>
+    <!-- <li>Buy Food</li>
+    <li>Study Backend</li>
+    <li>Eat Lunch</li> -->
+
+    <%for (var i = 0 ; i < newListItems.length ; i++) {%>
+    <li><%=newListItems[i]%></li>
+    <%}%>
+
+   </ul>
+   <form action="/" method="post">
+    <input type="text" name="newItem">
+    <button type="submit">Add (เพิ่ม)</button>
+   </form>
+   <form action="/remove" method="post">
+    <input type="text" name="removeItem">
+    <button type="submit">Remove (ลบ)</button>
+   </form>
+
+</body>
+</html>
+
